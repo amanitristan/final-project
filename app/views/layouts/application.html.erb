@@ -8,9 +8,98 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+      body {
+        background-color: #e0e0e0;
+      }
+      .name{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 30px;
+        border: solid red 1px;
+      }
+
+      .lead{
+        background-color: #a2c11c;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+        border: solid red 1px;
+      }
+
+      .nested_container{
+        background-color: #2c5d63;
+        color: #ffffff;
+        padding: 30px;
+        border: solid red 1px;
+      }
+
+      .sm_contain{
+        margin: 10px 10px;
+        padding: 30px;
+        border: solid red 1px;
+        flex: direction;
+        flex-direction: column;
+        align-content: space-around;
+      }
+
+    </style>
   </head>
 
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">BrainFood</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/articles">Articles
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/podcasts">Podcasts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/videos">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about_amani_tristan">About the Curator</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href=# role="button" aria-haspopup="true" aria-expanded="false">Add Content</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/add_article">Article</a>
+                <a class="dropdown-item" href="/add_podcast">Podcasts</a>
+                <a class="dropdown-item" href="/add_video">Videos</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
